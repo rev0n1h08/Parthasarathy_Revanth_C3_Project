@@ -60,4 +60,9 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
+    public int calculateOrderCost(List<String> items){
+        return -1;
+    }
+
 }

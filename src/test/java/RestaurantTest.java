@@ -53,5 +53,14 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 ()->restaurant.removeFromMenu("French fries"));
     }
+
+    @Test
+    public void sum_of_cost_of_selected_items_from_a_restaurant_should_be_order_cost(){
+        assertEquals(388,restaurant.calculateOrderCost(List.of("Sweet corn soup", "Vegetable lasagne")));
+    }
+    @Test
+    public void if_no_items_selected_from_a_restaurant_cost_should_be_zero(){
+        assertEquals(0,restaurant.calculateOrderCost(new ArrayList<>(){}));
+    }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
